@@ -1,0 +1,48 @@
+*{
+    font-family: sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+#enlace1 {
+    background-color: aquamarine;
+}
+#enlace1:hover{
+    color: aquamarine;  
+}
+#enlace2 {
+    background-color: brown;
+}
+#enlace2:hover {
+    color: brown;
+}
+#enlace3 {
+    background-color: chocolate;
+}
+#enlace3:hover {
+    color: chocolate;
+}
+#barra_enlaces{
+    text-align: center;
+}
+#barra_enlaces a{
+    display: inline-block;
+    width: 20%;
+    margin-left: 2%;
+    margin-right: 2%;
+    padding: 5px;
+}
+#barra_enlaces a:hover{
+    background-color: black;
+}
+#imagenes img{
+    width: 15%;
+}
+video{
+    width: 50%;
+    display: block;
+    margin:0 auto;
+}
