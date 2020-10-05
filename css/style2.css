@@ -1,0 +1,13 @@
+body{
+    margin: 0;
+    display: grid;
+    grid-template-columns:
+        repeat(4, minmax(min-content,1fr));
+    height: 100vh;
+    column-gap: 5px;
+    row-gap: 5px;
+}
+
+div{
+    background-color: lightsalmon;
+}
