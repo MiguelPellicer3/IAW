@@ -1,0 +1,24 @@
+header{
+    grid-area: h;
+    border-style: solid;
+}
+aside{
+    grid-area: a;
+    border-style: solid;
+}
+main{
+    grid-area: m;
+    border-style: solid;
+}
+footer{
+    border-style: solid;
+    grid-area: f;
+}
+body{
+    display: grid;
+    grid-template-areas:
+    'h h h'
+    'a m m'
+    'a f f';
+    height: 95vh;
+}
