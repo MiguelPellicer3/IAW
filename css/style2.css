@@ -1,13 +1,18 @@
 body{
     margin: 0;
     display: grid;
-    grid-template-columns:
-        repeat(4, minmax(min-content,1fr));
-    height: 100vh;
+    grid-template-columns:repeat(4,200px);
+    height: 99vh;
     column-gap: 5px;
     row-gap: 5px;
+    grid-auto-rows: 60px;
+    justify-items: stretch;
+    align-items: center;
+    justify-content: center;
 }
 
 div{
     background-color: lightsalmon;
+    text-align: center;
+    padding: 20px;
 }
