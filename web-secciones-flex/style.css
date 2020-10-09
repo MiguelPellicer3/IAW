@@ -1,0 +1,77 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0 1%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* Esto es lo mismo que*/
+    /* flex-flow: row wrap*/
+    align-content: flex-start;
+    height: 100vh;
+}
+
+body>* {
+    flex-basis: 100%;
+}
+
+#aside2 {
+    order: 1;
+}
+
+footer {
+    order: 2;
+    align-self: flex-end;
+}
+
+article {
+    padding: 5px;
+    background-color: blue;
+    border-radius: 5px;
+    margin: 5px 1%;
+}
+
+
+/* Tablet */
+
+@media(min-width: 600px) {
+    aside {
+        flex-basis: 48%;
+    }
+    #aside2 {
+        order: 0;
+    }
+}
+
+
+/* Desktop */
+
+@media(min-width: 1000px) {
+    main {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    article {
+        flex-basis: 48%;
+    }
+}
+
+
+/* Desktop wide */
+
+@media(min-width: 1200px) {
+    main {
+        flex-basis: 80%;
+        order: 1;
+    }
+    #aside2 {
+        flex-basis: 100%;
+    }
+    #aside1 {
+        flex-basis: 20%;
+        order: 1;
+    }
+}
