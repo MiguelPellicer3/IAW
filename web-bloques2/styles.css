@@ -14,8 +14,8 @@ header{
 }
 nav{
     background-color: gray;
-    position: absolute;
-    top: 0;
+    position: fixed;
+    top: 0px;
     height: 30px;
     width: 80%;
     right: 0;
