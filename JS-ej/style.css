@@ -1,0 +1,13 @@
+body {
+    background-color: chocolate;
+}
+
+p:hover {
+    color: white;
+}
+
+.advertencia {
+    background-color: tomato;
+    padding: 10px;
+    border-style: double;
+}
