@@ -28,8 +28,12 @@ function editarTarea(evento) {
 }
 
 function borrarEstaTarea(evento) {
-    evento.target.parentElement.remove();
-}
+    let nombreTarea = evento.target.parentElement.children[0].innerHTML;
+    let confirmacion= confirm(`¿Estas seguro de que quieres eliminar la tarea "${nombreTarea}" ?`);
+    if (confirmacion == true) {
+        evento.target.parentElement.remove();  
+    }
+} 
 
 function gestionarTecla(evento) {
     // console.log(evento)
