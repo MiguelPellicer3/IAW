@@ -13,8 +13,8 @@ function mostrarMenu() {
     /* codigo para mostrar el menu */
     let menu = document.getElementById("listaMenu");
     console.log(menu);
-    for (let i = 0; i < menu.children.length; i++) {
-        menu.children[i].children[1].style.display = "inline";
+    for (const liHijo of menu.children) {
+        liHijo.children[1].style.display = "inline";
     }
     /*menu.children[0].children[1].style.display = "inline";
     menu.children[1].children[1].style.display = "inline";
