@@ -1,1 +1,5 @@
-persona = '{"nombre": "Juan Pedro","apellido": "Valentin","edad": "25"}'
+{
+    "nombre": "Juan Pedro",
+    "apellido": "Valentin",
+    "edad": "25"
+}
