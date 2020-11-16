@@ -8,29 +8,29 @@ alert("Empieza el ejercicio 5");
  typeof variable1 es equivalente a typeof(variable1)
 
  typeof 2
- //--> Respuesta: 
+ //--> Respuesta: number
   
  typeof "Hola Mundo"
- //--> Respuesta:
+ //--> Respuesta: string
  
  typeof [2,3]
  typeof([2,3])
- //--> Respuesta: 
+ //--> Respuesta: object
  
  typeof 2.3
  typeof(2.3)
- //--> Respuesta: 
+ //--> Respuesta: number
 
  typeof {"propiedad": "valor"}
  typeof({"propiedad": "valor"})
- //--> Respuesta: 
+ //--> Respuesta: object
 
 
  // En este caso ejecuta primero esta línea
  let objeto1 = { "propiedad1": "valor", "propiedad2": 25.34, "propiedad3": true }
  // y luego esta otra:
  typeof objeto1
- //--> Respuesta: 
+ //--> Respuesta: object
 
 */
 
@@ -53,14 +53,14 @@ alert("Empieza el ejercicio 5");
 
 function suma(op1, op2) {
     let resultado = undefined;
-    if ( /*Sustituye este comentario por tu condición*/ ) {
+    if (typeof op1 != "number" || typeof op2 != "number") {
         throw `error funcion suma(parametro1, parametro2):
     Ambos parámetros deben ser número: 
      -El primer parámetro es ${typeof op1}
      -El segundo parámetro es ${typeof op2}`
-    }else{
-        resultado = op1+op2;
+    } else {
+        resultado = op1 + op2;
     }
-    alert("Resultado: "+resultado);
+    alert("Resultado: " + resultado);
     return resultado;
 }

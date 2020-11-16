@@ -33,6 +33,27 @@ deberá mostrar error en la edad y en la propiedad "casado".
 */
 
 function comprobarPersona(p) {
+    let tiponombre = typeof p.nombre
+    let tipoapelldo = typeof p.apellido
+    let tipoedad = typeof p.edad
+    let tipocasado = typeof p.casado
 
+    if (tiponombre != "string" || tipoapelldo != "string" || tipoedad != "number" || tipocasado != "boolean") {
+        if (tiponombre != "string") {
+            console.log("error de tipo, se esperaba un STRING y has introducido un:", tiponombre);
+        }
+        if (tipoapelldo != "string") {
+            console.log("error de tipo, se esperaba un STRING y has introducido un:", tipoapelldo);
+        }
+        if (tipoedad != "number") {
+            console.log("error de tipo, se esperaba un STRING y has introducido un:", tipoedad);
+        }
+        if (tipocasado != "boolean") {
+            console.log("error de tipo, se esperaba un STRING y has introducido un:", tipocasado);
+        }
+        return false;
+    } else {
+        return true;
+    }
 }
-
+comprobarPersona(persona1);

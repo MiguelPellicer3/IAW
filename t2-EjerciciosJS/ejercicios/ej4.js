@@ -7,9 +7,9 @@ La función Math.floor(num) devuelve el número entero más alto por debajo del 
  
 ¿Cuál sería el resultado si multiplicamos el número que sale de Math.random() por 5?.
 Evidentemente sería un número aleatorio, pero... ¿cuál sería su valor mínimo?
---> Respuesta: 
+--> Respuesta: 0
 ¿Y su valor máximo?
---> Respuesta:
+--> Respuesta: 5*0.9999999
 
 Ejercicio:
 Dado lo anterior, completa la función generarAleatorio(max) que pasado un número máximo nos devuelva un número entero entre [0 y max] ambos incluidos. Para ello debes usar la función Math.random y la función Math.floor().
@@ -21,9 +21,7 @@ function geneararAleatorio(max) {
     // Completa el código entre los comentarios, tendrás que conseguir
     // que dentro de la variable resultado se cree un numero aleatorio
     // entre 0 y max
-
-
-
+    resultado = Math.floor(max) * Math.random();
     //
     return resultado;
 }
@@ -34,5 +32,3 @@ function geneararAleatorio(max) {
 for (let index = 0; index < 20; index++) {
     console.log(geneararAleatorio(3));
 }
-
-
