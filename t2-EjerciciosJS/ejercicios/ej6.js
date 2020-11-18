@@ -46,10 +46,10 @@ function comprobarPersona(p) {
             console.log("error de tipo, se esperaba un STRING y has introducido un:", tipoapelldo);
         }
         if (tipoedad != "number") {
-            console.log("error de tipo, se esperaba un STRING y has introducido un:", tipoedad);
+            console.log("error de tipo, se esperaba un NUMBER y has introducido un:", tipoedad);
         }
         if (tipocasado != "boolean") {
-            console.log("error de tipo, se esperaba un STRING y has introducido un:", tipocasado);
+            console.log("error de tipo, se esperaba un BOOLEAN y has introducido un:", tipocasado);
         }
         return false;
     } else {
