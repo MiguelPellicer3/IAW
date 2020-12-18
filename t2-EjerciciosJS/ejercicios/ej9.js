@@ -6,3 +6,16 @@ alert("Empieza el ejercicio 9");
 // style del div modificando adecuadamente su posición.
 // window.screen.width y window.screen.height os darán el tamaño de la pantalla.
 // el movimiento tiene que finalizar a los 5 segundos de haber empezado. Para eso usad un timeout para cancelar el interval
+let div = document.getElementById("divMovil");
+
+setInterval(function movimiento(elemento) {
+    let estilo = elemento.style;
+    let alto = window.screen.height;
+    let ancho = window.screen.width;
+    for (let i = 0; i < alto; i++) {
+        estilo.top = i;
+    }
+    for (let i = 0; i < anchi.length - 100; i++) {
+        estilo.left = i;
+    }
+}, 5000);
