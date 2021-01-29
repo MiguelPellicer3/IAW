@@ -6,7 +6,7 @@ app.set('views',__dirname+'/vistas');
 
 
 app.get('/',function (req,res) {
-    res.render('paginas/inicio.ejs',{texto:"HOLA MUNDO"});
+    res.render('paginas/inicio',{texto:"HOLA MUNDO"});
 });
 
 
