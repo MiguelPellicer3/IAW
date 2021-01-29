@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <%- include('../partials/head'); %>
 </head>
+
 <body class="container">
 
     <header>
@@ -11,22 +13,33 @@
 
     <main>
         <div class="jumbotron">
-            <h1>Top Mascots</h1>
-            <p><%= tagline %></p>
+            <h1>Top Mascots: <%= miguel %>
+            </h1>
+            <p>
+                <%= tagline %>
+            </p>
             <ul>
                 <% mascots.forEach(function(mascot) { %>
                     <li>
-                        <strong><%= mascot.name %></strong>
+                        <strong>
+                            <%= mascot.name %>
+                        </strong>
                         representing <%= mascot.organization %>, born <%= mascot.birth_year %>
                     </li>
-                <% }); %>
+                    <% }); %>
             </ul>
+            <% lista.forEach(function(num) { %>
+                <p><%= num %></p>
+                <% }); %>
         </div>
     </main>
-
+    <aside>
+        <%- include('../partials/aside'); %>
+    </aside>
     <footer>
         <%- include('../partials/footer'); %>
     </footer>
 
 </body>
+
 </html>
