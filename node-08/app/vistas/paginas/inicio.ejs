@@ -3,11 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QUE BONICO
-        
-    </title>
+    <title>QUE BONICO</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <%- include('../parciales/cabecera') %>
+    <%=texto%>
+    <p>Tu ip es: <%=ip%></p>
+    <p>Tu protocolo es <%=protocolo%></p>
+    <p>Tu ruta es <%=path%></p>
+    <p>Tu url base es <%=urlbase%></p>
+    <p>Tu seguridad es <%=seguro%></p>
 </body>
 </html>
