@@ -4,10 +4,8 @@ const puerto = 3000;
 
 app.get('/', function (req,res) {
     let respuesta={
-        "nombre" : "Porco dio"
+        "lista" : ["hola","adiós"]
     }
-    //Permitir conexión desde otros orígenes
-    res.header("Access-Control-Allow-Origin","*");
     res.json(respuesta);
 })
 
