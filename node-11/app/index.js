@@ -27,6 +27,8 @@ server.get('/api/:propiedad', function (req,res) {
     let datos= JSON.parse(datostxt);
     if(datos.hasOwnProperty(prop)){
         res.send(datos[prop]);
+    }else {
+        res.send("ERROOOOOOR");
     }
 })
 
