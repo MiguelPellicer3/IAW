@@ -1,5 +1,3 @@
-const bodyParser = require("body-parser");
-
 alert('Aún no hemos empezado');
 
 fetch('http://localhost:3000')
@@ -9,12 +7,12 @@ fetch('http://localhost:3000')
 
 alert('Ya hemos empezado');
 
-function anadirLista(texto) {
-    let lista = document.createElement("ul");
-    document.body.appendChild(lista);
-    objeto.lista.forEach(elemento => {
+function anadirLista(objeto) {
+    let ul = document.createElement("ul");
+    document.body.appendChild(ul);
+    for (const texto of objeto) {
         let puntoNuevo = document.createElement("li");
-        lista.appendChild(puntoNuevo);
-        puntoNuevo.innerHTML=elemento;
-    });
+        ul.appendChild(puntoNuevo);
+        puntoNuevo.innerHTML=texto;
+    };
 }

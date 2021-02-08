@@ -6,6 +6,7 @@ app.get('/', function (req,res) {
     let respuesta={
         "lista" : ["hola","adiós"]
     }
+    res.header("Access-Control-Allow-Origin","*");
     res.json(respuesta);
 })
 
