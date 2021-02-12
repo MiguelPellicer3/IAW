@@ -4,15 +4,28 @@ const path= require('path');
 const puerto = 3000;
 
 let rutaPublic= path.join(__dirname,'public');
+let datos={
+    'itemsAside': ['main','pagina2','pagina3'],
+    'pagina': 'main'
+}
 app.use(express.static(rutaPublic));
 
 app.set('view engine','ejs'); //para que utilice ejs
 
 app.get('/',function (req,res) {
-    let listaAside={
-        'items': ['uno','dos','tres']
+    datos.pagina='main';
+    res.render('index', datos);
+})
+
+app.get('/:pag',function (req,res) {
+    if(datos.itemsAside.indexOf(req.params.pag == -1)){
+        // index of devuelve un numero mayor que 0 si existe
+        // si no existe devuelve -1
+        datos.pagina='error';
+    }else{
+    datos.pagina=req.params.pag;
     }
-    res.render('index', listaAside);
+    res.render('index',datos);
 })
 
 app.listen(puerto,iniciaservidor());
