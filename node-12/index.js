@@ -4,17 +4,19 @@ const path= require('path');
 const puerto = 3000;
 
 let rutaPublic= path.join(__dirname,'public');
-let datos={
-    'itemsAside': ['main','pagina2','pagina3'],
-    'pagina': 'main'
+const datos={
+    'itemsAside': ['main','pagina2','pagina3']
+    
 }
 app.use(express.static(rutaPublic));
 
 app.set('view engine','ejs'); //para que utilice ejs
 
 app.get('/',function (req,res) {
-    datos.pagina='main';
-    res.render('index', datos);
+    res.render('index', {
+        ...datos,
+        pagina: 'main'
+    });
 })
 
 app.get('/:pag',function (req,res) {
