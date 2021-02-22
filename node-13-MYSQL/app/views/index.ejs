@@ -1,23 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TABLA PELICULA</title>
+    <title>PERO QUE TABLA MÁS WAPA</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <table>
         <thead>
-            
+            <tr>
+                <% for( encabezado in datosTabla[0] ) { %>
+                    <th> <%= encabezado %> </th>
+                <% } %>
+            </tr>
         </thead>
         <tbody>
-        <% for (fila of datosTabla) { %>
+            <% for(fila of datosTabla){ %>
             <tr>
-                <td><%=fila.titulo%></td>
-                <td><%=fila.duracion%></td>
+                <% for( campo in fila ) { %>
+                    <td> <%= fila[campo] %> </td>
+                <% } %>
             </tr>
-        <%  } %>
+            <% } %>
         </tbody>
     </table>
 </body>
+
 </html>
