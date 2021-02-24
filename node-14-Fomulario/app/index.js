@@ -32,12 +32,31 @@ app.post('/guardarPeli', function (req,res){
             conexion.query("INSERT INTO Pelicula(titulo,duracion,id_Director) VALUES(?,?,?)",[titulo,duracion,1])
             .then(resultado =>{
                 console.log(resultado);
+                conexion.release();
             })
         })
         .catch(error => {
             console.log("No conectado", error);
         });
-})
+});
+
+app.post('/guardarPeli2', async function (req,res){
+    const titulo= req.body.ntitulo;
+    const duracion = req.body.nduracion;
+    try {
+        const resultado = await insertarPelicula(titulo,duracion);
+        console.log(resultado);
+        res.send('ok');
+    } catch (error) {
+        console.log(error);
+    }
+});
+
+async function insertarPelicula (tit,dur){
+    const grupoConexion = mariadb.createPool(datosBD);
+    const conexion = await grupoConexion.getConnection();
+    return conexion.query("INSERT INTO Pelicula(titulo,duracion,id_Director) VALUES(?,?,?)",[tit,dur,2]);
+}
 
 app.listen(puerto, iniciaservidor());
 function iniciaservidor(){
